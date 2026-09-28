@@ -42,89 +42,43 @@ menuLinks.forEach(function (link) {
 
 const priorities = document.querySelectorAll(".priority");
 
-const resultIcon = document.getElementById("resultIcon");
-const resultTitle = document.getElementById("resultTitle");
-const resultText = document.getElementById("resultText");
+const results = document.querySelectorAll(".result");
 
-
-const topics = {
-
-    saude: {
-        icon: "🏥",
-        title: "Saúde",
-        text: "Conheça as propostas relacionadas à saúde e ao atendimento da população."
-    },
-
-    seguranca: {
-        icon: "🛡️",
-        title: "Segurança",
-        text: "Conheça as propostas relacionadas à segurança, prevenção e proteção da comunidade."
-    },
-
-    educacao: {
-        icon: "🎓",
-        title: "Educação",
-        text: "Conheça as propostas relacionadas à educação, qualificação e oportunidades."
-    },
-
-    emprego: {
-        icon: "💼",
-        title: "Emprego",
-        text: "Conheça as propostas relacionadas ao trabalho, renda e desenvolvimento."
-    },
-
-    infra: {
-        icon: "🛣️",
-        title: "Infraestrutura",
-        text: "Conheça as propostas relacionadas à infraestrutura, mobilidade e desenvolvimento."
-    }
-
-};
-
-
-/* Quando clicar em uma prioridade */
 
 priorities.forEach(function (button) {
 
     button.addEventListener("click", function () {
 
-        /* Remove seleção anterior */
-
-        priorities.forEach(function (item) {
-
-            item.classList.remove("active");
-
-        });
-
-
-        /* Seleciona o botão */
-
-        button.classList.add("active");
-
-
-        /* Identifica o tema */
-
         const topic = button.getAttribute("data-topic");
 
-        const information = topics[topic];
+        const result = document.querySelector(
+            '.result[data-result="' + topic + '"]'
+        );
 
 
-        /* Atualiza o conteúdo */
+        /* Se o resultado já estiver aberto,
+           fecha */
 
-        if (information) {
+        if (result.classList.contains("show")) {
 
-            resultIcon.textContent = information.icon;
+            result.classList.remove("show");
 
-            resultTitle.textContent = information.title;
+            button.classList.remove("active");
 
-            resultText.textContent = information.text;
+            return;
 
         }
+
+
+        /* Abre o resultado */
+
+        result.classList.add("show");
+
+        button.classList.add("active");
 
     });
 
 });
-
 
 /* ================= ANIMAÇÃO SUAVE ================= */
 
