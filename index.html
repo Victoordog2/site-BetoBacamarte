@@ -1,1 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Beto Bacamarte | Site Oficial</title>
+  <meta name="description" content="Conheça Beto Bacamarte, suas ideias, propostas e agenda.">
+
+  <!-- Fontes inspiradas na identidade da arte: título forte + texto limpo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="top-line"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Beto Bacamarte - início">
+        <span class="brand-small">VEREADOR</span>
+        <span class="brand-name">Beto</span>
+        <span class="brand-last">Bacamarte</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#inicio">Início</a>
+        <a href="#conheca">Conheça</a>
+        <a href="#prioridades">Prioridades</a>
+        <a href="#propostas">Propostas</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-glow"></div>
+      <div class="hero-grid"></div>
+
+      <div class="container hero-inner">
+
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span></span>
+            EXPERIÊNCIA PARA TRABALHAR
+            <span></span>
+          </div>
+
+          <h1>
+            <span class="white">Beto</span>
+            <span class="lime">Bacamarte</span>
+          </h1>
+
+          <p class="hero-slogan">
+            <strong>EXPERIÊNCIA PARA TRABALHAR.</strong><br>
+            <strong>CORAGEM PARA TRANSFORMAR.</strong>
+          </p>
+
+          <p class="hero-text">
+            Conheça a história, as prioridades e as propostas
+            de Beto Bacamarte para nossa região.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-lime" href="#prioridades">Conheça as propostas</a>
+            <a class="btn btn-outline" href="#contato">Fale com a equipe</a>
+          </div>
+
+          <div class="hero-mini">
+            <span class="mini-check">✓</span>
+            Presença local
+            <span class="mini-dot"></span>
+            Trabalho
+            <span class="mini-dot"></span>
+            Compromisso
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="photo-frame">
+            <div class="photo-glow"></div>
+            <img src="beto-hero.png" alt="Beto Bacamarte com o Morro Itacolomi ao fundo">
+            <div class="photo-caption">
+              <span>MORRO ITACOLOMI</span>
+              <strong>NOSSA TERRA, NOSSO COMPROMISSO.</strong>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-top">
+            <strong>BETO</strong>
+            <span>BACAMARTE</span>
+          </div>
+
+          <div class="floating-badge badge-bottom">
+            <span>TRABALHO</span>
+            <strong>+ PRESENÇA</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero-curve"></div>
+    </section>
+
+
+    <!-- CONHEÇA -->
+    <section class="section about" id="conheca">
+      <div class="container about-grid">
+
+        <div class="section-heading">
+          <span class="section-kicker">QUEM É BETO</span>
+          <h2>Uma história construída <span>perto das pessoas.</span></h2>
+          <p>
+            Um espaço para apresentar a trajetória do candidato,
+            sua atuação e os motivos que o levaram a colocar seu
+            trabalho à disposição da população.
+          </p>
+        </div>
+
+        <div class="about-panel">
+          <div class="about-number">01</div>
+          <h3>Presença de verdade</h3>
+          <p>
+            Troque este texto pela biografia real do candidato.
+            Conte aqui sua trajetória, experiência profissional,
+            atuação comunitária e principais realizações.
+          </p>
+
+          <div class="line"></div>
+
+          <div class="about-items">
+            <div><b>✓</b><span>Experiência</span></div>
+            <div><b>✓</b><span>Diálogo</span></div>
+            <div><b>✓</b><span>Trabalho</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PRIORIDADES INTERATIVAS -->
+    <section class="section priorities" id="prioridades">
+      <div class="container">
+
+        <div class="section-heading centered light">
+          <span class="section-kicker">PARTICIPE</span>
+          <h2>Qual é a sua <span>prioridade?</span></h2>
+          <p>
+            Escolha um tema e conheça as propostas relacionadas.
+          </p>
+        </div>
+
+        <div class="priority-grid" id="priorityGrid">
+
+          <button class="priority-card active" data-theme="saude">
+            <span class="priority-icon">🏥</span>
+            <span class="priority-name">Saúde</span>
+            <small>Atendimento e cuidado</small>
+          </button>
+
+          <button class="priority-card" data-theme="seguranca">
+            <span class="priority-icon">🛡️</span>
+            <span class="priority-name">Segurança</span>
+            <small>Proteção e prevenção</small>
+          </button>
+
+          <button class="priority-card" data-theme="educacao">
+            <span class="priority-icon">🎓</span>
+            <span class="priority-name">Educação</span>
+            <small>Oportunidades</small>
+          </button>
+
+          <button class="priority-card" data-theme="emprego">
+            <span class="priority-icon">💼</span>
+            <span class="priority-name">Emprego</span>
+            <small>Trabalho e renda</small>
+          </button>
+
+          <button class="priority-card" data-theme="infra">
+            <span class="priority-icon">🛣️</span>
+            <span class="priority-name">Infraestrutura</span>
+            <small>Cidade e mobilidade</small>
+          </button>
+
+        </div>
+
+        <div class="interactive-result" id="interactiveResult">
+          <div class="result-icon" id="resultIcon">🏥</div>
+          <div>
+            <span class="result-kicker">PRIORIDADE SELECIONADA</span>
+            <h3 id="resultTitle">Saúde</h3>
+            <p id="resultText">
+              Conteúdo de exemplo. Substitua por propostas reais,
+              verificáveis e compatíveis com o cargo do candidato.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PROPOSTAS -->
+    <section class="section proposals" id="propostas">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-kicker">COMPROMISSOS</span>
+          <h2>Ideias que cabem <span>na vida real.</span></h2>
+          <p>
+            Organize aqui as principais propostas da campanha,
+            sempre com informações objetivas e verificáveis.
+          </p>
+        </div>
+
+        <div class="proposal-grid">
+
+          <article class="proposal-card featured">
+            <div class="proposal-top">
+              <span class="proposal-icon">🏥</span>
+              <span class="proposal-number">01</span>
+            </div>
+            <h3>Saúde mais próxima</h3>
+            <p>
+              Apresente de forma clara qual problema será enfrentado,
+              qual é a proposta e como ela pode ser encaminhada.
+            </p>
+            <a href="#prioridades">Ver detalhes →</a>
+          </article>
+
+          <article class="proposal-card">
+            <div class="proposal-top">
+              <span class="proposal-icon">🛡️</span>
+              <span class="proposal-number">02</span>
+            </div>
+            <h3>Segurança</h3>
+            <p>
+              Espaço para explicar medidas, articulações e ações
+              relacionadas à segurança pública.
+            </p>
+            <a href="#prioridades">Ver detalhes →</a>
+          </article>
+
+          <article class="proposal-card">
+            <div class="proposal-top">
+              <span class="proposal-icon">🎓</span>
+              <span class="proposal-number">03</span>
+            </div>
+            <h3>Educação</h3>
+            <p>
+              Mostre objetivos concretos para educação, qualificação
+              e oportunidades para os jovens.
+            </p>
+            <a href="#prioridades">Ver detalhes →</a>
+          </article>
+
+          <article class="proposal-card">
+            <div class="proposal-top">
+              <span class="proposal-icon">🛣️</span>
+              <span class="proposal-number">04</span>
+            </div>
+            <h3>Infraestrutura</h3>
+            <p>
+              Apresente prioridades para mobilidade, obras e
+              desenvolvimento regional.
+            </p>
+            <a href="#prioridades">Ver detalhes →</a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- AGENDA -->
+    <section class="section agenda" id="agenda">
+      <div class="container">
+
+        <div class="section-heading centered">
+          <span class="section-kicker">AGENDA</span>
+          <h2>Onde o trabalho <span>acontece.</span></h2>
+        </div>
+
+        <div class="agenda-list">
+
+          <article class="agenda-item">
+            <div class="agenda-date">
+              <strong>10</strong>
+              <span>OUT</span>
+            </div>
+            <div class="agenda-info">
+              <span class="agenda-type">ENCONTRO</span>
+              <h3>Conversa com a comunidade</h3>
+              <p>📍 Gravataí · 19h</p>
+            </div>
+            <span class="agenda-arrow">→</span>
+          </article>
+
+          <article class="agenda-item">
+            <div class="agenda-date">
+              <strong>12</strong>
+              <span>OUT</span>
+            </div>
+            <div class="agenda-info">
+              <span class="agenda-type">REUNIÃO</span>
+              <h3>Encontro regional</h3>
+              <p>📍 Cachoeirinha · 18h30</p>
+            </div>
+            <span class="agenda-arrow">→</span>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTATO -->
+    <section class="contact" id="contato">
+      <div class="container contact-inner">
+
+        <div>
+          <span class="section-kicker">CANAIS OFICIAIS</span>
+          <h2>Quer acompanhar<br><span>o trabalho?</span></h2>
+          <p>
+            Acesse os canais oficiais e acompanhe as novidades.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <!-- Troque os links pelos canais oficiais -->
+          <a class="contact-btn whatsapp" href="https://wa.me/5551999999999" target="_blank" rel="noopener">
+            <span>☏</span>
+            <div>
+              <small>FALE COM A EQUIPE</small>
+              <strong>WhatsApp</strong>
+            </div>
+          </a>
+
+          <a class="contact-btn instagram" href="https://instagram.com/betode.carvalho" target="_blank" rel="noopener">
+            <span>◎</span>
+            <div>
+              <small>ACOMPANHE</small>
+              <strong>Instagram</strong>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <span>VEREADOR</span>
+        <strong>Beto Bacamarte</strong>
+        <small>EXPERIÊNCIA PARA TRABALHAR · CORAGEM PARA TRANSFORMAR</small>
+      </div>
+
+      <div class="footer-links">
+        <a href="#inicio">Início</a>
+        <a href="#propostas">Propostas</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <div class="footer-legal">
+        <p>Material informativo. Ajuste a identificação legal e demais informações conforme as regras eleitorais aplicáveis.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
