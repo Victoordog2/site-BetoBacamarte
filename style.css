@@ -621,46 +621,104 @@ button {
   font-size: 10px;
 }
 
-.interactive-result {
-  margin-top: 25px;
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 22px;
-  align-items: center;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 18px;
-  padding: 28px;
+.results-container {
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 12px;
 }
+
+
+.result {
+    display: grid;
+
+    grid-template-columns: 75px 1fr;
+
+    gap: 20px;
+
+    align-items: center;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,.08);
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    opacity: 0;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    transition:
+        opacity .3s ease,
+        max-height .4s ease,
+        padding .4s ease;
+}
+
+
+/* Resultado que foi selecionado */
+
+.result.show {
+    opacity: 1;
+
+    max-height: 600px;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
 
 .result-icon {
-  width: 70px;
-  height: 70px;
-  display: grid;
-  place-items: center;
-  border-radius: 15px;
-  background: var(--lime);
-  font-size: 32px;
+    width: 60px;
+    height: 60px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 14px;
+
+    background: var(--lima);
+
+    font-size: 30px;
 }
 
-.result-kicker {
-  color: var(--lime);
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 2px;
+
+.result small {
+    color: var(--lima);
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
 }
 
-.interactive-result h3 {
-  font-family: var(--title);
-  text-transform: uppercase;
-  font-size: 34px;
-  line-height: 1;
-  margin: 3px 0 5px;
+
+.result h3 {
+    font-family: var(--titulo);
+
+    font-size: 34px;
+
+    line-height: 1;
+
+    margin: 4px 0;
 }
 
-.interactive-result p {
-  color: rgba(255,255,255,.65);
-  font-size: 13px;
+
+.result p {
+    margin: 0;
+
+    color: rgba(255,255,255,.65);
 }
 
 
