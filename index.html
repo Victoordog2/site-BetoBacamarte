@@ -27,11 +27,11 @@
         <span class="brand-last">Bacamarte</span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+      <button class="menu-toggle" id="menuButton" aria-label="Abrir menu" aria-expanded="false" type="button">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="main-nav" id="mainNav">
+      <nav class="main-nav" id="menu">
         <a href="#inicio">Início</a>
         <a href="#conheca">Conheça</a>
         <a href="#prioridades">Prioridades</a>
@@ -123,8 +123,9 @@
           <span class="section-kicker">QUEM É BETO</span>
           <h2>Uma história construída <span>perto das pessoas.</span></h2>
           <p>
-            Sou Roberto Corrêa de Carvalho, conhecido carinhosamente como Beto Bacamarte, sou natural de Gravataí e construi minha trajetória marcada pela dedicação à comunidade, pelo trabalho e pelo compromisso com as pessoas. 
-Sou Casado com a Clarice Silva e pai de dois filhos, Tiago e Thaiane, sou avô de três netos. Para mim, a família é minha principal base e fonte de inspiração. São valores como honestidade, respeito, responsabilidade e dedicação que também procuro levar para minha atuação pública.
+            Sou Roberto Corrêa de Carvalho, conhecido carinhosamente como Beto Bacamarte, sou natural de Gravataí e construi minha trajetória marcada pela dedicação à comunidade, pelo trabalho e pelo compromisso com as pessoas.
+            Sou casado com a Clarice Silva e pai de dois filhos, Tiago e Thaiane, sou avô de três netos. Para mim, a família é minha principal base e fonte de inspiração. São valores como honestidade, respeito e responsabilidade que guiam meu caminho.
+            Hoje, como Vereador, pai, avô e cidadão gravataiense, sigo construindo minha história com o propósito de representar a população e contribuir para uma Gravataí cada vez melhor.
           </p>
         </div>
 
@@ -132,7 +133,7 @@ Sou Casado com a Clarice Silva e pai de dois filhos, Tiago e Thaiane, sou avô d
           <div class="about-number">01</div>
           <h3>Presença de verdade</h3>
           <p>
-Hoje, como Vereador, pai, avô e cidadão Gravataiense, sigo construindo minha história com o propósito de representar a população e contribuir para uma Gravataí cada vez melhor.
+            Hoje, como Vereador, pai, avô e cidadão Gravataiense, sigo construindo minha história com o propósito de representar a população e contribuir para uma Gravataí cada vez melhor.
           </p>
 
           <div class="line"></div>
@@ -163,143 +164,106 @@ Hoje, como Vereador, pai, avô e cidadão Gravataiense, sigo construindo minha h
 
         <div class="priority-grid" id="priorityGrid">
 
-          <button class="priority-card active" data-theme="saude">
+          <button class="priority-card active" data-topic="saude" type="button">
             <span class="priority-icon">🏥</span>
             <span class="priority-name">Saúde</span>
             <small>Atendimento e cuidado</small>
           </button>
 
-          <button class="priority-card" data-theme="seguranca">
+          <button class="priority-card" data-topic="seguranca" type="button">
             <span class="priority-icon">🛡️</span>
             <span class="priority-name">Segurança</span>
             <small>Proteção e prevenção</small>
           </button>
 
-          <button class="priority-card" data-theme="educacao">
+          <button class="priority-card" data-topic="educacao" type="button">
             <span class="priority-icon">🎓</span>
             <span class="priority-name">Educação</span>
             <small>Oportunidades</small>
           </button>
 
-          <button class="priority-card" data-theme="emprego">
+          <button class="priority-card" data-topic="emprego" type="button">
             <span class="priority-icon">💼</span>
             <span class="priority-name">Emprego</span>
             <small>Trabalho e renda</small>
           </button>
 
-          <button class="priority-card" data-theme="infra">
+          <button class="priority-card" data-topic="infra" type="button">
             <span class="priority-icon">🛣️</span>
             <span class="priority-name">Infraestrutura</span>
             <small>Cidade e mobilidade</small>
           </button>
 
         </div>
-<div class="results-container" id="resultsContainer">
 
-    <div class="result" data-result="saude">
+        <div class="results-container" id="resultsContainer">
 
-        <div class="result-icon">
-            🏥
-        </div>
-
-        <div>
-            <small>PRIORIDADE</small>
-
-            <h3>Saúde</h3>
-
-            <p>
+          <div class="result show" data-result="saude">
+            <div class="result-icon">🏥</div>
+            <div>
+              <small>PRIORIDADE</small>
+              <h3>Saúde</h3>
+              <p>
                 Propostas voltadas à melhoria do atendimento,
                 acesso aos serviços de saúde e qualidade de vida
                 da população.
-            </p>
-        </div>
+              </p>
+            </div>
+          </div>
 
-    </div>
-
-
-    <div class="result" data-result="seguranca">
-
-        <div class="result-icon">
-            🛡️
-        </div>
-
-        <div>
-            <small>PRIORIDADE</small>
-
-            <h3>Segurança</h3>
-
-            <p>
+          <div class="result" data-result="seguranca">
+            <div class="result-icon">🛡️</div>
+            <div>
+              <small>PRIORIDADE</small>
+              <h3>Segurança</h3>
+              <p>
                 Ações voltadas à prevenção, segurança pública,
                 proteção das comunidades e melhoria da qualidade
                 de vida.
-            </p>
-        </div>
+              </p>
+            </div>
+          </div>
 
-    </div>
-
-
-    <div class="result" data-result="educacao">
-
-        <div class="result-icon">
-            🎓
-        </div>
-
-        <div>
-            <small>PRIORIDADE</small>
-
-            <h3>Educação</h3>
-
-            <p>
+          <div class="result" data-result="educacao">
+            <div class="result-icon">🎓</div>
+            <div>
+              <small>PRIORIDADE</small>
+              <h3>Educação</h3>
+              <p>
                 Incentivo à educação, qualificação profissional,
                 formação de jovens e ampliação das oportunidades.
-            </p>
-        </div>
+              </p>
+            </div>
+          </div>
 
-    </div>
-
-
-    <div class="result" data-result="emprego">
-
-        <div class="result-icon">
-            💼
-        </div>
-
-        <div>
-            <small>PRIORIDADE</small>
-
-            <h3>Emprego</h3>
-
-            <p>
+          <div class="result" data-result="emprego">
+            <div class="result-icon">💼</div>
+            <div>
+              <small>PRIORIDADE</small>
+              <h3>Emprego</h3>
+              <p>
                 Incentivo à geração de empregos, desenvolvimento
                 econômico, empreendedorismo e oportunidades
                 para os trabalhadores.
-            </p>
-        </div>
+              </p>
+            </div>
+          </div>
 
-    </div>
-
-
-    <div class="result" data-result="infra">
-
-        <div class="result-icon">
-            🛣️
-        </div>
-
-        <div>
-            <small>PRIORIDADE</small>
-
-            <h3>Infraestrutura</h3>
-
-            <p>
+          <div class="result" data-result="infra">
+            <div class="result-icon">🛣️</div>
+            <div>
+              <small>PRIORIDADE</small>
+              <h3>Infraestrutura</h3>
+              <p>
                 Melhorias em infraestrutura, mobilidade urbana,
                 estradas, saneamento e desenvolvimento das cidades.
-            </p>
+              </p>
+            </div>
+          </div>
+
         </div>
 
-    </div>
-
-</div>
-       
+      </div>
     </section>
 
 
