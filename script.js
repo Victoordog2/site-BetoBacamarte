@@ -40,30 +40,52 @@ menuLinks.forEach(function (link) {
 
 /* ================= PRIORIDADES ================= */
 
-const priorities = document.querySelectorAll(".priority");
+const priorityCards = document.querySelectorAll(".priority-card");
 
 const results = document.querySelectorAll(".result");
 
 
-priorities.forEach(function (button) {
+priorityCards.forEach(function (card) {
 
-    button.addEventListener("click", function () {
+    card.addEventListener("click", function () {
 
-        const topic = button.getAttribute("data-topic");
+        const topic = card.getAttribute("data-topic");
 
         const result = document.querySelector(
             '.result[data-result="' + topic + '"]'
         );
 
+        if (!result) return;
 
-        /* Se o resultado já estiver aberto,
-           fecha */
+
+        /* Fecha todos os outros resultados */
+
+        results.forEach(function (res) {
+
+            if (res !== result) {
+                res.classList.remove("show");
+            }
+
+        });
+
+        /* Fecha todos os outros cards */
+
+        priorityCards.forEach(function (btn) {
+
+            if (btn !== card) {
+                btn.classList.remove("active");
+            }
+
+        });
+
+
+        /* Se o resultado já estiver aberto, fecha */
 
         if (result.classList.contains("show")) {
 
             result.classList.remove("show");
 
-            button.classList.remove("active");
+            card.classList.remove("active");
 
             return;
 
@@ -74,7 +96,7 @@ priorities.forEach(function (button) {
 
         result.classList.add("show");
 
-        button.classList.add("active");
+        card.classList.add("active");
 
     });
 
@@ -83,7 +105,7 @@ priorities.forEach(function (button) {
 /* ================= ANIMAÇÃO SUAVE ================= */
 
 const animatedElements = document.querySelectorAll(
-    ".card, .agenda-item, .info-box, .priority"
+    ".card, .agenda-item, .info-box, .priority-card, .proposal-card"
 );
 
 
