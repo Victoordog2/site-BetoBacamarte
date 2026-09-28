@@ -60,6 +60,12 @@ button {
   cursor: pointer;
 }
 
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(217, 255, 0, .9);
+  outline-offset: 3px;
+}
+
 .container {
   width: min(1180px, 92%);
   margin-inline: auto;
@@ -151,6 +157,46 @@ button {
   height: 2px;
   margin: 5px;
   background: var(--lime);
+}
+
+.main-nav.open {
+  display: flex;
+}
+
+@media (max-width: 920px) {
+  .nav-wrap {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px 18px;
+    background: rgba(3, 39, 11, .97);
+    border: 1px solid rgba(217, 255, 0, .15);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+  }
+
+  .main-nav a {
+    width: 100%;
+    padding: 6px 0;
+    font-size: 11px;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
 }
 
 
@@ -920,6 +966,76 @@ button {
 
 .contact-btn strong {
   font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .hero-inner,
+  .about-grid,
+  .contact-inner,
+  .footer-grid {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .hero-inner {
+    gap: 40px;
+    padding: 60px 0 100px;
+  }
+
+  .about-grid,
+  .contact-inner,
+  .footer-grid {
+    gap: 26px;
+  }
+
+  .contact-actions {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .priority-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .proposal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .agenda-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .agenda-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .brand {
+    min-width: auto;
+  }
+
+  .hero h1 span {
+    font-size: clamp(54px, 18vw, 82px);
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .priority-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .floating-badge {
+    display: none;
+  }
+
+  .hero-visual {
+    max-width: 100%;
+  }
 }
 
 
